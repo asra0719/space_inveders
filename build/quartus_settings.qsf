@@ -1,0 +1,15 @@
+# Device Selection
+set_global_assignment -name DEVICE CYCLONE10LP
+set_global_assignment -name TOP_LEVEL_ENTITY space_invaders
+
+# Include pin assignments
+source pin_assignment.qsf
+
+# Timing Analysis Settings
+set_global_assignment -name AUTO_ROUTER_EFFORT "STANDARD FIT"
+
+# Simulation Settings
+set_global_assignment -name ENABLE_OPENCL_SUPPORT OFF
+
+# FPGA-specific Settings
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"

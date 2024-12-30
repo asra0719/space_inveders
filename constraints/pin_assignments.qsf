@@ -1,0 +1,75 @@
+# FPGA Device
+set_global_assignment -name DEVICE CYCLONE10LP
+
+# Clock Input
+set_location_assignment PIN_P11 -to CLOCK_50    # 50 MHz onboard clock
+
+# VGA Pin Assignments
+set_location_assignment PIN_A2 -to VGA_R[0]     # Red channel bit 0
+set_location_assignment PIN_B1 -to VGA_R[1]     # Red channel bit 1
+set_location_assignment PIN_L3 -to VGA_R[2]     # Red channel bit 2
+set_location_assignment PIN_L1 -to VGA_R[3]     # Red channel bit 3
+
+set_location_assignment PIN_C2 -to VGA_G[0]     # Green channel bit 0
+set_location_assignment PIN_D1 -to VGA_G[1]     # Green channel bit 1
+set_location_assignment PIN_C1 -to VGA_G[2]     # Green channel bit 2
+set_location_assignment PIN_D2 -to VGA_G[3]     # Green channel bit 3
+
+set_location_assignment PIN_E2 -to VGA_B[0]     # Blue channel bit 0
+set_location_assignment PIN_E1 -to VGA_B[1]     # Blue channel bit 1
+set_location_assignment PIN_F2 -to VGA_B[2]     # Blue channel bit 2
+set_location_assignment PIN_F1 -to VGA_B[3]     # Blue channel bit 3
+
+set_location_assignment PIN_H2 -to VGA_HS       # Horizontal Sync
+set_location_assignment PIN_H1 -to VGA_VS       # Vertical Sync
+
+# Switches for Inputs
+set_location_assignment PIN_A8 -to SW[0]        # Switch 0
+set_location_assignment PIN_B8 -to SW[1]        # Switch 1
+set_location_assignment PIN_C8 -to SW[2]        # Switch 2
+set_location_assignment PIN_D8 -to SW[3]        # Switch 3
+
+# Push Buttons
+set_location_assignment PIN_E8 -to KEY[0]       # Button 0 (e.g., fire)
+set_location_assignment PIN_F8 -to KEY[1]       # Button 1 (e.g., move left)
+set_location_assignment PIN_G8 -to KEY[2]       # Button 2 (e.g., move right)
+set_location_assignment PIN_H8 -to KEY[3]       # Button 3 (optional)
+
+# LED Indicators
+set_location_assignment PIN_A9 -to LED[0]       # LED 0 (e.g., Player Alive)
+set_location_assignment PIN_B9 -to LED[1]       # LED 1 (e.g., Game Over)
+set_location_assignment PIN_C9 -to LED[2]       # LED 2 (e.g., Alien Hit)
+set_location_assignment PIN_D9 -to LED[3]       # LED 3 (optional)
+
+# I/O Standards
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_HS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS
+
+# SW and KEY
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[3]
+
+# LEDs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[3]

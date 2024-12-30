@@ -1,0 +1,7 @@
+QUARTUS_VERSION = "22.1"    # Replace with your Quartus version
+DATE = "2024-12-30"
+
+PROJECT_REVISION = "space_invaders"
+
+# Device family
+FAMILY = "Cyclone 10 LP"
